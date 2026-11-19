@@ -6,14 +6,13 @@ type Props = {
     activities: Activity[]
     SelectActivity: (id: string) => void;
     selectedActivity?: Activity;
-    deleteActivity: (id: string) => void;
 }
-export default function ActivityList({activities, SelectActivity, deleteActivity}: Props) {
+export default function ActivityList({activities, SelectActivity}: Props) {
   return (
     <Box sx={{display:"flex", flexDirection:"column", gap:3}}>
         {activities.map((activity) => (
          
-                <ActivityCard key={activity.id} activity={activity} selectActivity={SelectActivity} deleteActivity={deleteActivity}/>
+                <ActivityCard key={activity.id} activity={activity} selectActivity={SelectActivity} />
         ))}
     </Box>
   )
