@@ -21,7 +21,7 @@ export default function ActivityCard({ activity }: Props) {
                 <CardHeader
                     avatar={<Avatar sx={{ height: 80, width: 80 }} />}
                     title={activity.title}
-                    titleTypographyProps={{ fontWeight: 'bold', fontSize: '20' }}
+                    slotProps={{ title: { sx: { fontWeight: 'bold', fontSize: 20 } } }}
                     subheader={<>Hosted by {' '} <Link to={`/profiles/bob`}>Bob</Link></>}
                 />
                 <Box sx={{ display: "flex", flexDirection: "column", gap: 2, mr: 2 }}>
